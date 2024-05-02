@@ -40,17 +40,34 @@
                 <div class="red-box">T</div>
                 <div class="red-box">R</div>
             </div>
-            <input type="checkbox" class="toggler">
+            <div id="cta-header" class="button-style"><a href='#contact' class="button-action">Contact Us <svg
+                        width="24px" height="20px" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#FFF" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></a>
+            </div>
+            <a id="logoToggler" href='#hero'></a>
+            <input id="menuToggler" type="checkbox" class="toggler">
             <label class="hamburger">
                 <div></div>
             </label>
             <div class="navbar">
 
                 <ul>
-                    <li><a class="setUnderlineOnCurrentPage" id="h0" href='#hero'>Home</a></li>
-                    <li><a id="h1" href='#alnes'>Visit</a></li>
-                    <li><a id="h2" href='#about'>About</a></li>
-                    <li><a id="h3" href='#contact' class="button-learn">Contact Us</a></li>
+                    <li><a onclick="toggleMenuVisibility()" class="" id="h0"
+                            href='#hero'>Home</a></li>
+                    <li><a onclick="toggleMenuVisibility()" id="h1" href='#alnes'>Visit</a></li>
+                    <li><a onclick="toggleMenuVisibility()" id="h2" href='#about'>About</a></li>
+                    <li>
+                        <div class="button-style"><a onclick="toggleMenuVisibility()" id="h3" href='#contact'
+                                class="button-action">Contact Us <svg id="arrow" width="24px" height="20px"
+                                    viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+
+                        </div>
+                    </li>
                 </ul>
 
             </div>
@@ -109,12 +126,13 @@
              -->
             <div class="row">
                 <div class="column">
-                    <img class="img-cover" src="images/alnes2.jpeg" alt="Image 1 to be filled">
+                    <img class="img-cover-alnes" src="images/alnes Reb.jpg" alt="Image 1 to be filled">
                 </div>
                 <div class="column columnText">
-                    <h2>Se det, lag det, prøv det, gjør det</h2>
-                    <p>Some text..</p>
-                    <a class="button-learn" href="newpage.html" target="_blank">Learn more</a>
+                    <h2>Alnes Lighthouse </h2>
+                    <p>Experience the stunning views of Ålesund from the mountain top, then enjoy the picturesque sight of the historic Alnes Lighthouse.</p>
+                    <div class="button-style"><a class="button-action" href="alnes.html" >Learn
+                            more</a></div>
                 </div>
             </div>
 
@@ -128,7 +146,8 @@
                 <div class="column columnText">
                     <h2>Se det, lag det, prøv det, gjør det</h2>
                     <p>Some text..</p>
-                    <a class="button-learn" href="newpage.html" target="_blank">Learn more</a>
+                    <div class="button-style"><a class="button-action" href="newpage.html" target="_blank">Learn
+                            more</a></div>
                 </div>
                 <div class="column">
                     <img class="img-cover" src="images/alnes2.jpeg" alt="Image 1 to be filled">
@@ -145,9 +164,9 @@
             <h2 class="centeredHeader">About us</h2>
             <div class="row">
 
-                <div class="column disabled">
+                <div class="column">
 
-                    <img class="img-half " src="images/buss.jpg" alt="Image 1 to be filled">
+                    <img class="img-half " src="images/b5.jpg" alt="Image 1 to be filled">
                 </div>
                 <div class="column columnText">
                     <h2>Royal Tur Reiser</h2>
@@ -190,31 +209,16 @@
 
                             <div class="contact-form-base">
                                 <form>
-                                    <label for="name">Name*</label>
+                                    <label class="same-line" for="name">Name*</label>
                                     <input type="text" id="name" name="name" minlength="7" maxlength=" 50"
                                         placeholder=" [ Your full name ]" required>
 
-                                    <div class="c-phone visually-hidden">
-                                        <label for="countryCode">Phone Number (optional)</label>
-                                        <select id="countryCode" name="countryCode">
-                                            <option value="+1">+1 (USA)</option>
-                                            <option value="+44">+44 (UK)</option>
-                                            <option value="+47">+47 (Norway)</option>
-                                            <option value="+61">+61 (Australia)</option>
-                                            <option value="+86">+86 (China)</option>
-
-                                            <!-- Add more options for other countries -->
-                                        </select>
-                                        <input type="tel" id="phone" name="phone" minlength="4" maxlength="20"
-                                            placeholder="e.g., 90011900">
-                                    </div>
-
-                                    <label for="email">Email*</label>
+                                    <label class="same-line" for="email">Email*</label>
                                     <input type="text" id="email" name="email" minlength="8" maxlength="40"
                                         placeholder=" [ Your email address ]" required>
 
 
-                                    <label for="message">Message*</label>
+                                    <label class="new-line" for="message">Message*</label>
                                     <textarea id="message" name="message" rows="4" cols="50"
                                         placeholder="If you have any questions or need any assistance"
                                         required></textarea>
@@ -230,46 +234,27 @@
 
 
             <footer>
-                <p>© 2023 YourWebsiteName</p>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <div>
+                    <p>Royal Tur Reiser © 2024 RTR <br>
+                     <a href="personvern.txt">Privacy policy</a></p>
+                </div>
+
+                <div class="followFooter">
+                    <p>Follow us</p>
+                    <a class="smn-button-footer" href="https://www.instagram.com/royal_tour_travel"
+                        title="Visit us on Instagram"><img class="block" src="images/instagram.svg"
+                            alt="Instagram logo"></a>
+                    <a class="smn-button-footer" href="https://www.facebook.com/royalturreiser.no"
+                        title="Visit us on Facebook">
+                        <img class="smn-button" src="images/facebook.svg" alt="Facebook logo"></a>
+
+                </div>
+                <div id="madeBy">
+                    <p> Designed By: <a href="https://github.com/HansHKF">HansHKF</a></p>
+                </div>
             </footer>
 
 
-        </section>
-        <section id="journey">
-
-            <div class="image-container">
-                <div class="image-wrapper">
-                    <img src="images/alnes2.jpeg" alt="Image 1 to be filled">
-                    <div class="image-text-wrapper">
-                        <h1 class="image-text-header"> Test header text</h1>
-                        <p class="image-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                            fringilla ex lectus, nec bibendum arcu bibendum et. Vivamus a congue mauris. </p>
-                        <a class="button-learn" href="newpage.html" target="_blank">Learn more</a>
-                    </div>
-                </div>
-
-                <div class="image-wrapper-center">
-                    <img src="images/contact.jpg" alt="Image 2 to be filled">
-
-                </div>
-                <!--
-                make a img class so we can style em more neetly
-             -->
-                <div class="image-wrapper">
-                    <img src="images/troll.jpg" alt="Image 3 to be filled">
-                    <div class="image-text-wrapper">
-                        <h1 class="image-text-header"> T1</h1>
-                        <p class="image-text">Text</p>
-                        <a class="button-learn" href="newpage.html" target="_blank">Learn more</a>
-                    </div>
-                </div>
-
-            </div>
         </section>
 
     </div>
@@ -282,6 +267,8 @@
 
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="snapToPoint.js"></script>
+    <script type="text/javascript" src="menuToggler.js"></script>
+
 </body>
 
 </html>

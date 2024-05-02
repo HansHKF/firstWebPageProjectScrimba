@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Destination Aalesund</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+
+</head>
+
+
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+    <div id="container">
+
+        <header id="header" class="header transparent">
+            <div class="logo">
+                <div class="red-box">R</div>
+                <div class="red-box">T</div>
+                <div class="red-box">R</div>
+            </div>
+            <div id="cta-header" class="button-style"><a href='index.html#contact' class="button-action">Contact Us <svg
+                        width="24px" height="20px" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#FFF" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></a>
+            </div>
+            <a id="logoToggler" href='index.html#hero'></a>
+            <input id="menuToggler" type="checkbox" class="toggler">
+            <label class="hamburger">
+                <div></div>
+            </label>
+            <div class="navbar">
+
+                <ul>
+                    <li><a onclick="toggleMenuVisibility()" class="" id="h0" href='index.html#hero'>Home</a></li>
+                    <li><a onclick="toggleMenuVisibility()" id="h1" href='index.html#alnes'>Visit</a></li>
+                    <li><a onclick="toggleMenuVisibility()" id="h2" href='index.html#about'>About</a></li>
+                    <li>
+                        <div class="button-style"><a onclick="toggleMenuVisibility()" id="h3" href='index.html#contact'
+                                class="button-action">Contact Us <svg id="arrow" width="24px" height="20px"
+                                    viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+
+        <!--
+                Change "Visit" to TWO more items. Alnes og Trollstigen. To better reflect where we are on the "page".
+             -->
+
+
+        <section id="learn-more">
+
+            <!--
+                Insert text centered and button under (Learn more) -> small over text (same as headers on 2nd page, then main Header text Welcome to Aalesund?) -> Learn more Button
+             -->
+            <div class="content">
+                <h1 class="hero-text">Discover Alnes</h1>
+            </div>
+
+            <div class="learn-more-callToAction">
+                <div>
+                    <div class="callToAction">
+                        <!-- Bouncing button arrow
+                and a solid line of same color as next page.-->
+
+                        <button class="animated-button scrollButton">
+                            <svg width="50" height="50">
+                                <circle cx="25" cy="25" r="25" stroke="black" stroke-width="0" fill="white" />
+                                <g transform="translate(12.5,15)"> <!-- Translate the figure to center it -->
+                                    <path
+                                        d="M20.16 6.65 12 14.71 3.84 6.65a2.27 2.27 0 0 0-3.18 0 2.2 2.2 0 0 0 0 3.15L12 21 23.34 9.8a2.2 2.2 0 0 0 0-3.15 2.26 2.26 0 0 0-3.18 0"
+                                        transform="scale(1)"></path> <!-- Scale the figure down by 40% -->
+                                </g>
+                            </svg>
+                        </button>
+                        <p>With Royal Tur Reiser </p>
+                        <div><button class="scrollButton"> <svg width="50" height="50">
+
+                                    <g transform="translate(12.5,15)"> <!-- Translate the figure to center it -->
+                                        <path
+                                            d="M20.16 6.65 12 14.71 3.84 6.65a2.27 2.27 0 0 0-3.18 0 2.2 2.2 0 0 0 0 3.15L12 21 23.34 9.8a2.2 2.2 0 0 0 0-3.15 2.26 2.26 0 0 0-3.18 0"
+                                            transform="scale(0.5)"></path> <!-- Scale the figure down by 40% -->
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+        <section id="learn-more-2">
+
+            <div class="row">
+                <div class="column">
+                    <img class="img-cover-alnes" src="images/alnes Reb.jpg" alt="Image 1 to be filled">
+                </div>
+                <div class="column columnText">
+                    <h2>Alnes</h2>
+                    <p>The Alnes Lighthouse is a historic lighthouse located on the north side of Godøy island in the
+                        municipality of Giske, Norway. It was established in 1853 to guide fishing boats safely to the
+                        harbor of the small fishing community of Alnes. The lighthouse offers a magnificent view of the
+                        surrounding area, including the beautiful sea landscape. It is a popular destination for
+                        visitors who can enjoy the stunning views of the ocean, whether it's a sunny summer day or
+                        during a winter storm. The lighthouse is situated about 20 kilometers northwest of Ålesund and
+                        can be reached by car through three sub-sea tunnels. It is definitely worth a visit for those
+                        seeking a picturesque sight and a glimpse into Norway's maritime history.</p>
+                    <div class="button-style"><a class="button-action" href="alnes.html">Learn
+                            more</a></div>
+                </div>
+            </div>
+
+
+            <footer id="learn-more-footer">
+                <div>
+                    <p>Royal Tur Reiser © 2024 RTR <br>
+                        <a href="personvern.txt">Privacy policy</a>
+                    </p>
+                </div>
+
+                <div class="followFooter">
+                    <p>Follow us</p>
+                    <a class="smn-button-footer" href="https://www.instagram.com/royal_tour_travel"
+                        title="Visit us on Instagram"><img class="block" src="images/instagram.svg"
+                            alt="Instagram logo"></a>
+                    <a class="smn-button-footer" href="https://www.facebook.com/royalturreiser.no"
+                        title="Visit us on Facebook">
+                        <img class="smn-button" src="images/facebook.svg" alt="Facebook logo"></a>
+
+                </div>
+                <div id="madeBy">
+                    <p> Designed By: <a href="https://github.com/HansHKF">HansHKF</a></p>
+                </div>
+            </footer>
+        </section>
+
+    </div>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="scroll-learn-more.js"></script>
+    <script type="text/javascript" src="snapToPoint.js"></script>
+    <script type="text/javascript" src="menuToggler.js"></script>
+
+</body>
+
+</html>

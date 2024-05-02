@@ -5,6 +5,7 @@ const scrollEvent = () => {
   const section3 = document.querySelector("#trollstigen");
   const section4 = document.querySelector("#about");
   const section5 = document.querySelector("#contact");
+  
 
   const h0 = document.querySelector("#h0");
   const h1 = document.querySelector("#h1");
@@ -69,3 +70,11 @@ const scrollEvent = () => {
 
 const main = document.querySelector("#container");
 main.addEventListener("scroll", scrollEvent);
+
+window.onload = function() {
+
+  
+
+  // Trigger the scrollEvent when the page loads
+  scrollEvent();
+};

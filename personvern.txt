@@ -1,0 +1,24 @@
+ROYAL TUR REISER AS is the data controller responsible for the processing of personal data as described in this privacy statement. In this privacy statement, we explain the types of personal data we collect and how we process them. This privacy statement applies to royalturreiser.no.
+
+The categories of personal data we collect and process include:
+
+Basic information: Name
+Contact information: Email address, phone number
+We collect personal data directly from you through the information you provide to us.
+
+How we use personal data:
+
+Administration of customer relationships: We use your personal data to manage our customer relationship with you. This includes customer service, complaint handling, and error correction related to your customer relationship. The legal basis for processing personal data for this purpose is that it is necessary to fulfill a contract with you.
+Sales and marketing: We use personal data for sales and marketing of our products and services. For example, you may receive emails from us. The legal basis for processing personal data for this purpose is our legitimate interest. You have the option to opt out of parts of this processing, such as opting out of receiving emails from us. Additionally, we may ask for your consent to use your personal data for profiling, where we derive interests and needs based on your personal data. The purpose of profiling is to make our marketing more relevant.
+Your rights: If you wish to exercise any of your rights, please contact us at post@royalturreiser.no.
+
+Right to access your own information: You can request a copy of all the information we process about you. Please contact the email address above to exercise your right of access.
+Right to correction of personal data: You have the right to request us to correct or supplement information that is incorrect or misleading.
+Right to deletion of personal data: You have the right to have your personal data deleted without undue delay. You can therefore request us to delete information about yourself at any time. However, please note that information that we are required to retain for other legal obligations (such as the Accounting Act) will not be deleted.
+Restriction of processing of personal data: In some situations, you can also request us to restrict the processing of information about you. You can do this by managing consents or reservations in our solutions.
+Right to object to the processing of personal data: If we process information about you based on our tasks or on the basis of a balancing of interests, you have the right to object to our processing of information about you. You can do this by managing consents or reservations in our solutions.
+You have the right to receive your personal data in a structured, commonly used, and machine-readable format. To request your personal data, please contact the email address provided above.
+
+If you believe that we are not complying with the rules of the Personal Data Act, we encourage you to inform us through the contact or channel you have already established with us. You also have the option to lodge a complaint about our handling of personal data to Datatilsynet, the Norwegian Data Protection Authority.
+
+Please note that this privacy statement is based on a template from gdprcontrol.no.
