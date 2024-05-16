@@ -952,7 +952,7 @@ footer a {
 @media screen and (max-height: 1000px) and (orientation: portrait) {
 
     #container{
-        scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity mandatory;
     }
 
     #learn-more {
