@@ -5,6 +5,7 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,12 +40,19 @@
                 <div class="red-box">T</div>
                 <div class="red-box">R</div>
             </div>
+
             <div id="cta-header" class="button-style"><a href='#contact' class="button-action">Contact Us <svg
                         width="24px" height="20px" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#FFF" stroke-width="3" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg></a>
             </div>
+            <div id="contact-phonenumber-mobile">
+                <div id="contact-button-mobile" class="button-style"><a id="contact-phone-link-mobile" href=''
+                        class="button-action"></a>
+                </div>
+            </div>
+
             <a id="logoToggler" href='#hero'></a>
             <input id="menuToggler" type="checkbox" class="toggler">
             <label class="hamburger">
@@ -53,18 +61,21 @@
             <div class="navbar">
 
                 <ul>
-                    <li><a onclick="toggleMenuVisibility()" class="" id="h0"
-                            href='#hero'>Home</a></li>
+                    <li><a onclick="toggleMenuVisibility()" class="" id="h0" href='#hero'>Home</a></li>
                     <li><a onclick="toggleMenuVisibility()" id="h1" href='#alnes'>Visit</a></li>
                     <li><a onclick="toggleMenuVisibility()" id="h2" href='#about'>About</a></li>
                     <li>
-                        <div class="button-style"><a onclick="toggleMenuVisibility()" id="h3" href='#contact'
-                                class="button-action">Contact Us <svg id="arrow" width="24px" height="20px"
-                                    viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div id="contact-button" class="button-style"><a onclick="toggleMenuVisibility()" id="h3"
+                                href='#contact' class="button-action">Contact Us <svg id="arrow" width="24px"
+                                    height="20px" viewBox="0 -5 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="3"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg></a>
-
+                        </div>
+                        <div id="contact-phonenumber">
+                            <div id="contact-button-phonenumber" class="button-style"><a id="contact-phone-link" href=''
+                                    class="button-action"></a>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -129,9 +140,16 @@
                 </div>
                 <div class="column columnText">
                     <h2>Alnes Lighthouse </h2>
-                    <p>Experience the stunning views of Ålesund from the mountain top, then enjoy the picturesque sight of the historic Alnes Lighthouse.</p>
-                    <div class="button-style"><a class="button-action" href="alnes.html" >Learn
-                            more</a></div>
+                    <p>Experience the stunning views of Ålesund from the mountain top, then enjoy the picturesque sight
+                        of the historic Alnes Lighthouse.</p>
+                    <div class="button-group">
+                        <div class="button-style"><a class="button-action" href="alnes.html">Learn
+                                more</a></div>
+                        <p> or</p>
+                        <div class="button-style"><a class="button-action"
+                                href="https://www.viator.com/tours/Alesund/Aalesund-Alnes-Excursion-The-most-beautiful-place-on-the-most-beautiful-island/d4312-359890P1?localeSwitch=1&pid=P00193391&mcid=42383&medium=link"
+                                target="_blank">Book Now</a></div>
+                    </div>
                 </div>
             </div>
 
@@ -143,13 +161,23 @@
              -->
             <div class="row">
                 <div class="column columnText">
-                    <h2>Se det, lag det, prøv det, gjør det</h2>
-                    <p>Some text..</p>
-                    <div class="button-style"><a class="button-action" href="newpage.html" target="_blank">Learn
-                            more</a></div>
+                    <h2>Trollstigen</h2>
+                    <p>Embark on a unique Norwegian adventure, where towering mountains and majestic fjords beckon you.
+                        Explore the heart of Norway's natural beauty, with panoramic views over Ålesund and the stunning
+                        landscapes of Storfjorden, Gudbrandsdalsjuvet, and the legendary Trollstigen. Immerse yourself
+                        in the splendor of Norway's breathtaking scenery, where the ancient mountain pass of Trollstigen
+                        stands as a testament to the country's rugged beauty and engineering marvels.</p>
+                    <div class="button-group">
+                        <div class="button-style"><a class="button-action" href="trollstigen.html">Learn
+                                more</a></div>
+                        <p> or</p>
+                        <div class="button-style"><a class="button-action"
+                                href="https://www.viator.com/tours/Alesund/Trollstigen-First-Class-Adventure-with-Royal-Tour/d4312-359890P4?pid=P00193391&mcid=42383&medium=link"
+                                target="_blank">Book Now</a></div>
+                    </div>
                 </div>
                 <div class="column">
-                    <img class="img-cover" src="images/alnes2.jpeg" alt="Image 1 to be filled">
+                    <img class="img-cover" src="images/Trollstigen.JPG" alt="Image 1 to be filled">
                 </div>
 
             </div>
@@ -207,13 +235,15 @@
 
 
                             <div class="contact-form-base">
-                                <form>
+                                <h4 style="text-align: center;" class="sent-notification"></h4>
+                                <!-- Remove on scroll ? -->
+                                <form id="contactUsForm">
                                     <label class="same-line" for="name">Name*</label>
                                     <input type="text" id="name" name="name" minlength="7" maxlength=" 50"
                                         placeholder=" [ Your full name ]" required>
 
                                     <label class="same-line" for="email">Email*</label>
-                                    <input type="text" id="email" name="email" minlength="8" maxlength="40"
+                                    <input type="text" id="email" name="email" minlength="8" maxlength="50"
                                         placeholder=" [ Your email address ]" required>
 
 
@@ -222,7 +252,8 @@
                                         placeholder="If you have any questions or need any assistance"
                                         required></textarea>
 
-                                    <input type="submit" value="Send Email">
+                                    <button id="sendMail" type="button" onclick="validateSubmittedMail()" value="">Send
+                                        Email</button>
                                 </form>
                                 <span class="required-note">* indicates a required field</span>
                             </div>
@@ -235,7 +266,8 @@
             <footer>
                 <div>
                     <p>Royal Tur Reiser © 2024 RTR <br>
-                     <a href="personvern.txt">Privacy policy</a></p>
+                        <a href="personvern.txt">Privacy Policy</a>
+                    </p>
                 </div>
 
                 <div class="followFooter">
@@ -249,7 +281,7 @@
 
                 </div>
                 <div id="madeBy">
-                    <p> Designed By: <a href="https://github.com/HansHKF">HansHKF</a></p>
+                    <p> Created By <a href="https://github.com/HansHKF">HansHKF</a></p>
                 </div>
             </footer>
 
@@ -263,10 +295,12 @@
 
 
 
-
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="snapToPoint.js"></script>
-    <script type="text/javascript" src="menuToggler.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="xpathscripts/scroll-menu-updater.js"></script>
+    <script type="text/javascript" src="xpathscripts/scroll-snapToPoint.js"></script>
+    <script type="text/javascript" src="xpathscripts/menuToggler.js"></script>
+    <script type="text/javascript" src="xpathscripts/scroll-contact-phone.js"></script>
+    <script type="text/javascript" src="xpathscripts/validateEmail.js"></script>
 
 </body>
 

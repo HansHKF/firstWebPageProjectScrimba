@@ -53,6 +53,15 @@ section {
     scroll-snap-align: start;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    color: transparent;
+}
+
 
 
 .centeredHeader {
@@ -79,6 +88,10 @@ section {
     align-items: center;
 
     height: 100dvh;
+}
+
+.twoColumn {
+    overflow: auto;
 }
 
 #alnes {
@@ -108,24 +121,37 @@ section {
     font-size: 60px;
     font-weight: 800;
 }
-#learn-more-2 .columnText h2{
-    padding: 60px 0 20px 0;
+
+
+
+.label-text {
+    font-size: 14px;
+    font-weight: 600;
 }
 
-#learn-more-2 .columnText p {
-   text-align: left; 
-   padding: 0 5px 0 5px;
-   overflow-y: auto;
-}
-
-.columnText p {
-    max-width: 420px;
+#alnes .columnText p {
+    max-width: 540px;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 3px 20px 3px;
     text-align: center;
     font-size: min(max(18px, 1vw), 20px);
     font-weight: 500;
     width: fit-content;
+    text-align: center;
+    padding: 0 10px;
+
+}
+
+#trollstigen .columnText p {
+    max-width: 540px;
+    margin: 0;
+    padding: 0 3px 20px 3px;
+    text-align: center;
+    font-size: min(max(18px, 1vw), 20px);
+    font-weight: 500;
+    width: fit-content;
+    text-align: left;
+    padding: 0px 10px;
 }
 
 #trollstigen .columnText {
@@ -134,6 +160,10 @@ section {
 
 .columnText {
     justify-content: center;
+}
+
+#about {
+    overflow-y: auto;
 }
 
 #about .columnText {
@@ -173,6 +203,10 @@ section {
     height: 65vh;
 }
 
+#about .row {
+    padding: 0 0 20px 0;
+}
+
 .img-half {
     width: 100%;
     /* Adjust to fill column width */
@@ -186,7 +220,7 @@ section {
     margin-left: 100px;
 }
 
- .img-cover-alnes {
+.img-cover-alnes {
     width: 100%;
     /* Adjust to fill column width */
     height: 100%;
@@ -287,9 +321,15 @@ section {
     border: 3px solid transparent;
     background: linear-gradient(var(--bg-color-red), var(--bg-color-red)) padding-box,
         linear-gradient(0deg, var(--bg-color-rose), var(--bg-color-red)) border-box;
+}
 
+.button-style-booking {
+    margin: 10px 2px 20px 2px;
+    border-radius: 0;
+}
 
-
+.button-style.button-style-booking>.button-action {
+    border-radius: 0;
 }
 
 .button-action {
@@ -330,25 +370,18 @@ section {
     stroke: #FFFDFA;
 }
 
-
-
-
-.contact-background {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(images/contact.jpg) no-repeat center center / cover;
-
+.button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0px;
 }
 
-.contact-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* Adjust the opacity as needed */
-
+.button-group p {
+    margin: 10px;
+    padding: 0;
 }
+
 
 .learn-more-callToAction {
     position: relative;
@@ -377,7 +410,7 @@ section {
     z-index: 1;
     display: flex;
     width: 100%;
-    height: 40vh;
+    height: 40%;
     height: 40dvh;
     justify-content: space-around;
     align-items: center;
@@ -438,17 +471,9 @@ footer a {
     cursor: pointer;
     /* Change cursor to pointer on hover */
 }
-#learn-more-footer{
-    
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    padding: 10px; /* Add padding to the footer */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    z-index: 1000; /* Set a high z-index value for the footer */
-    scroll-snap-align: start;
-}
+
+
+
 .smn-button-footer {
     height: 30px;
     padding: 20px 5px 0px 5px;
@@ -486,8 +511,51 @@ footer a {
     width: 4px;
 }
 
+#learn-more-footer {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    /* Add padding to the footer */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    z-index: 1;
+    /* Set a high z-index value for the footer */
+    scroll-snap-align: end;
+    box-sizing: content-box;
+}
+
+#learn-more-2 .columnText h2 {
+    padding: 60px 0 20px 0;
+}
+
+#learn-more-2 .columnText p {
+    text-align: left;
+    padding: 0 10px 15px 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    max-width: 560px;
+}
 
 
+.contact-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(images/contact.jpg) no-repeat center center / cover;
+
+}
+
+.contact-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Adjust the opacity as needed */
+
+}
 
 .contact-form {
     max-width: 360px;
@@ -541,7 +609,7 @@ footer a {
 
 }
 
-.contact-form input[type="submit"] {
+.contact-form button[type="button"] {
     width: 100%;
     padding: 10px;
     border: solid 2px var(--bg-color-rose);
@@ -554,34 +622,6 @@ footer a {
     font-weight: bold;
 }
 
-
-/******************************************/
-.c-phone label {
-    margin-right: 10px;
-    /* Add some spacing between label and select */
-}
-
-.c-phone select,
-.c-phone input {
-    flex: 1;
-    /* Allow children to take up available space */
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    resize: none;
-}
-
-.c-phone {
-    display: flex;
-    /* Change to horizontal layout */
-    flex-direction: row;
-    /* Children will be placed in a row */
-    align-items: center;
-    /* Align children vertically in the center */
-}
-
-/*************************************************/
-
 .required-note {
     color: #999;
     font-size: 12px;
@@ -589,22 +629,7 @@ footer a {
     align-self: flex-start;
 }
 
-.four {
-    background-color: rgb(191, 64, 191);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    color: transparent;
-}
 
 #hero {
     background: var(--bg-color-white) url(images/Hero.jpg) center/100% 100% no-repeat;
@@ -616,12 +641,21 @@ footer a {
 }
 
 #learn-more {
-    background: var(--bg-color-white) url(images/alnes3.jpg) center/100% 100% no-repeat;
+    background: var(--bg-color-white) url(images/alnes5.jpg) center/100% 100% no-repeat;
     /*Need this on child of container to scroll snap*/
     scroll-snap-align: start;
     position: relative;
+}
 
+#trollstigen-hero>section#learn-more {
+    background: var(--bg-color-white) url(images/Trollstigen1.JPG) center/100% 100% no-repeat;
+    /*Need this on child of container to scroll snap*/
+    scroll-snap-align: start;
+    position: relative;
+}
 
+#trollstigen-hero .hero-text {
+    font-size: 8vw;
 }
 
 
@@ -642,7 +676,7 @@ footer a {
 
 }
 
-#learn-more .callToAction{
+#learn-more .callToAction {
     background-color: var(--bg-color-white);
 }
 
@@ -711,6 +745,10 @@ footer a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: fit-content;
     height: fit-content;
+}
+
+.learn-more-hero-text {
+    margin: 0;
 }
 
 #logoToggler {
@@ -896,26 +934,47 @@ footer a {
 
 @media screen and (max-height: 1000px) and (orientation: portrait) {
 
-    /*
-    .img-cover {
-        display: none;
+    #learn-more {
+        background: var(--bg-color-white) url(images/alnes4.jpg) center/100% 100% no-repeat;
     }
-*/
+
+    #trollstigen-hero>section#learn-more {
+        background: var(--bg-color-white) url(images/trollstigen2.jpg) center/100% 100% no-repeat;
+    }
+
+    .hero-text {
+        font-size: 10vw;
+    }
+
     #madeBy {
         display: none;
         visibility: hidden;
     }
-    
-#learn-more-footer{
-    
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px; /* Add padding to the footer */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    z-index: 1000; /* Set a high z-index value for the footer */
-    scroll-snap-align: start;
-}
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group>.button-style {
+        margin: 0;
+    }
+
+    #learn-more-footer {
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        /* Add padding to the footer */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
+        z-index: 1;
+        /* Set a high z-index value for the footer */
+        scroll-snap-align: end;
+        box-sizing: content-box;
+    }
 
     .contact-form {
         margin: 20px 0 0 0;
@@ -1073,10 +1132,19 @@ On header-line hover, make it appear as white.
     }
 
 
-    .columnText p {
+    #alnes .columnText p {
         max-width: 560px;
         font-size: min(max(18px, 1vh), 24px);
+        padding: 10px 5px;
     }
+
+    #trollstigen .columnText p {
+        max-width: 560px;
+        font-size: min(max(18px, 1vh), 24px);
+        padding: 10px 5%;
+    }
+
+
 
     #trollstigen .row {
         flex-direction: column-reverse;
@@ -1138,7 +1206,7 @@ On header-line hover, make it appear as white.
         top: 0;
         left: 0;
         background: var(--bg-color-black);
-        height: 2px;
+        height: 4px;
         width: 60%;
         transition: all 0.4s ease;
     }
@@ -1153,7 +1221,7 @@ On header-line hover, make it appear as white.
         top: -10px;
         background: var(--bg-color-black);
         width: 100%;
-        height: 2px;
+        height: 3px;
         transition: all 0.4s ease;
     }
 
