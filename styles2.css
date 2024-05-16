@@ -51,32 +51,8 @@ section {
     justify-content: center;
     align-items: center;*/
     /*Need this on child of container to scroll snap*/
-   /* scroll-snap-align: start;*/
+    scroll-snap-align: start;
    
-}
-
-#hero{
-    height: 100vh;
-    /*Fallback*/
-    height: 100dvh;
-    scroll-snap-align: start;
-}
-
-#alnes{
-    scroll-snap-align: start;
-}
-
-.button-group{
-    scroll-snap-align: start;
-}
-#trollstigen{
-    scroll-snap-align: start;
-}
-#about{
-    scroll-snap-align: start;
-}
-#contact{
-    scroll-snap-align: start;
 }
 
 .height-auto{
