@@ -52,13 +52,14 @@ section {
     align-items: center;*/
     /*Need this on child of container to scroll snap*/
     scroll-snap-align: start;
-   
+
 }
 
-.height-auto{
+.height-auto {
     min-height: 100dvh;
     height: auto;
 }
+
 .section-footer {
     height: 1px;
     scroll-snap-align: end;
@@ -176,7 +177,7 @@ section {
 }
 
 #about {
-    height: 100 dvh;
+    height: auto;
     overflow-y: auto;
 }
 
@@ -389,7 +390,7 @@ section {
     flex-direction: row;
     align-items: center;
     margin: 20px 0px;
-    
+
 }
 
 .button-group p {
@@ -519,7 +520,7 @@ footer a {
     content: '';
     position: absolute;
     right: 0;
-   
+
     background-color: var(--bg-color-red);
     height: 28px;
     box-sizing: border-box;
@@ -950,6 +951,10 @@ footer a {
 
 @media screen and (max-height: 1000px) and (orientation: portrait) {
 
+    #container{
+        scroll-snap-type: y proximity;
+    }
+
     #learn-more {
         background: var(--bg-color-white) url(images/alnes4.jpg) center/100% 100% no-repeat;
     }
@@ -969,13 +974,16 @@ footer a {
 
     .button-group {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        scroll-snap-stop: always; 
+        scroll-snap-stop: always;
     }
 
     .button-group>.button-style {
         margin: 0;
+    }
+
+    .button-group>p {
+        padding: 0px 10px !important;
     }
 
     #learn-more-footer {
@@ -1017,6 +1025,7 @@ footer a {
 
     #about {
         overflow-y: auto;
+        min-height: 100dvh;
     }
 
     #about .columnText {
