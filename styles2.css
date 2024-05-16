@@ -648,7 +648,7 @@ footer a {
 }
 
 #trollstigen-hero>section#learn-more {
-    background: var(--bg-color-white) url(images/Trollstigen1.JPG) center/100% 100% no-repeat;
+    background: var(--bg-color-white) url(images/trollstigen1.jpg) center/100% 100% no-repeat;
     /*Need this on child of container to scroll snap*/
     scroll-snap-align: start;
     position: relative;
