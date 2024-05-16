@@ -955,7 +955,7 @@ footer a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        scroll-snap-align: end;
+        scroll-snap-stop: always; 
     }
 
     .button-group>.button-style {
