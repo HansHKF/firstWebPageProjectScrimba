@@ -52,6 +52,10 @@ section {
     /*Need this on child of container to scroll snap*/
     scroll-snap-align: start;
 }
+.section-content {
+    height: 1px;
+    scroll-snap-align: end;
+}
 
 .visually-hidden {
     position: absolute;
@@ -96,11 +100,13 @@ section {
 
 #alnes {
     background-color: var(--bg-color-pink);
+    height: 100dvh;
     overflow-y: auto;
 }
 
 #trollstigen {
     background-color: var(--bg-color-pink);
+    height: 100dvh;
     overflow-y: auto;
 }
 
@@ -163,6 +169,7 @@ section {
 }
 
 #about {
+    height: 100 dvh;
     overflow-y: auto;
 }
 
