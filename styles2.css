@@ -519,11 +519,11 @@ footer a {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -5px;
+   
     background-color: var(--bg-color-red);
-    height: 30px;
+    height: 28px;
     box-sizing: border-box;
-    width: 4px;
+    width: 3px;
 }
 
 #learn-more-footer {
