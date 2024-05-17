@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /**
 Palette: 
@@ -32,48 +32,28 @@ body {
 /*Magic scroll time*/
 #container {
     scroll-snap-type: y mandatory;
+    overflow-y: auto;
     overflow-x: hidden;
     height: 100vh;
-    /*Fallback
-     overflow-y: auto;
-    */
-    height: 100dvh;
 
 
 }
 
 section {
     height: 100vh;
-    /*Fallback*/
-    height: 100dvh;
     /* padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;*/
     /*Need this on child of container to scroll snap*/
-    scroll-snap-align: end;
+    scroll-snap-align: start;
+
 
 }
-
-.height-auto {
-    min-height: 100dvh;
-    height: auto;
-}
-
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    color: transparent;
-}
-
 
 
 .centeredHeader {
-    padding-top: 7vh;
+    padding-top: 100px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -95,27 +75,16 @@ section {
     justify-content: center;
     align-items: center;
 
-    height: 100dvh;
-}
-
-.twoColumn {
-    overflow: auto;
+    height: 100vh;
 }
 
 #alnes {
     background-color: var(--bg-color-pink);
-    overflow-y: auto;
 }
 
 #trollstigen {
     background-color: var(--bg-color-pink);
-    overflow-y: auto;
-    scroll-snap-align: end;
-
-
 }
-
-
 
 #alnes .columnText {
     color: var(--text-color-red);
@@ -126,76 +95,44 @@ section {
 }
 
 .columnText h2 {
-    max-width: 420px;
-    width: fit-content;
+    width: 420px;
     margin: 0;
     padding: 0 0 20px 0;
     text-align: center;
     font-size: 60px;
     font-weight: 800;
+
 }
 
-
-
-.label-text {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-#alnes .columnText p {
-    max-width: 540px;
+.columnText p {
+    width: 420px;
     margin: 0;
-    padding: 0 3px 20px 3px;
+    padding: 0 0 20px 0;
     text-align: center;
     font-size: min(max(18px, 1vw), 20px);
     font-weight: 500;
-    width: fit-content;
-    text-align: center;
-    padding: 0 10px;
-
 }
 
-#trollstigen .columnText p {
-    max-width: 540px;
-    margin: 0;
-    padding: 0 3px 20px 3px;
-    text-align: center;
-    font-size: min(max(18px, 1vw), 20px);
-    font-weight: 500;
-    width: fit-content;
-    text-align: left;
-    padding: 0px 10px;
+#trollstigen .columnText {
+    color: var(--text-color-red);
 }
 
 .columnText {
     justify-content: center;
 }
 
-#about {
-    height: auto;
-    overflow-y: auto;
-}
-
-#about .columnText {
-    justify-content: center;
-    /*Matching margin of img*/
-    padding-left: 100px;
-}
-
 #about .columnText h2 {
-    max-width: 380px;
-    width: fit-content;
+    width: 380px;
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 24px;
+    font-size: 42px;
     font-weight: 800;
     padding-bottom: 20px;
 }
 
 #about .columnText p {
-    max-width: 420px;
-    width: fit-content;
+    width: 420px;
     margin: 0;
     padding: 3px 20px 0px 20px;
     text-align: left;
@@ -213,10 +150,6 @@ section {
     height: 65vh;
 }
 
-#about .row {
-    padding: 0 0 20px 0;
-}
-
 .img-half {
     width: 100%;
     /* Adjust to fill column width */
@@ -228,22 +161,6 @@ section {
 
     /* Added for positioning the image */
     margin-left: 100px;
-}
-
-.img-cover-alnes {
-    width: 100%;
-    /* Adjust to fill column width */
-    height: 100%;
-    /* Adjust to fill column height */
-    object-fit: fill;
-    /* Added for better image fitting */
-    position: relative;
-    /* Added for positioning the image */
-    top: 0;
-    /* Added for positioning the image */
-    left: 0;
-    /* Added for positioning the image */
-    padding-top: 50px;
 }
 
 .img-cover {
@@ -259,7 +176,6 @@ section {
     /* Added for positioning the image */
     left: 0;
     /* Added for positioning the image */
-    padding-top: 1.5vh;
 }
 
 
@@ -320,90 +236,52 @@ section {
 }
 
 /* END DELETE*/
-.button-style {
+
+.button-learn {
+    background-color: var(--bg-color-red);
     border-radius: 32px;
     text-decoration: none;
-    width: fit-content;
-    display: inline-block;
-    margin: 20px 2px;
-    cursor: pointer;
-    transition: 0.1s;
-    border: 3px solid transparent;
-    background: linear-gradient(var(--bg-color-red), var(--bg-color-red)) padding-box,
-        linear-gradient(0deg, var(--bg-color-rose), var(--bg-color-red)) border-box;
-}
-
-.button-style-booking {
-    margin: 10px 2px 20px 2px;
-    border-radius: 0;
-}
-
-.button-style.button-style-booking>.button-action {
-    border-radius: 0;
-}
-
-.button-action {
-    background-color: transparent;
-    border-radius: 32px;
-    text-decoration: none;
-    padding: 8px 19px;
+    padding: 10px 22px;
     text-align: center;
     width: fit-content;
     display: inline-block;
-    font-size: 18px;
+    font-size: 17px;
+    margin: 4px 2px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.3);
-
-
+    transition: 0.3s;
 }
 
-.button-style:hover {
-    background: linear-gradient(0deg, var(--bg-color-rose), 12%, var(--bg-color-red)) padding-box, linear-gradient(to right, var(--bg-color-rose), 12%, var(--bg-color-red)) border-box;
+.button-learn:hover {
+    background-color: var(--bg-color-white);
+    color: var(--bg-color-black);
+    border: 0px;
     transform: translateY(-3px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-.button-style:hover .button-action {
+
+.button-learn:not(:hover) {
     color: var(--bg-color-white);
 }
 
-.button-action:not(:hover) {
-    color: var(--bg-color-white);
-}
-
-.button-style:hover svg {
-    transform: rotate(45deg);
-
-}
-
-.button-style:hover svg path {
-    stroke: #FFFDFA;
-}
-
-.button-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px 0px;
-    scroll-snap-align: end;
-
-}
-
-.button-group p {
-    margin: 10px;
-    padding: 0;
-}
 
 
-.learn-more-callToAction {
+
+.contact-background {
     position: relative;
-    z-index: 1;
-    display: flex;
     width: 100%;
-    height: 60%;
-    height: 60dvh;
-    justify-content: space-around;
-    align-items: center;
+    height: 100%;
+    background: url(images/contact.jpg) no-repeat center center / cover;
+
+}
+
+.contact-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Adjust the opacity as needed */
+
 }
 
 .content {
@@ -412,18 +290,6 @@ section {
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-#learn-more .content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    height: 40%;
-    height: 40dvh;
     justify-content: space-around;
     align-items: center;
 }
@@ -453,14 +319,10 @@ footer {
     text-align: center;
     padding: 10px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-size: 13px;
     font-weight: 500;
-}
-
-footer div {
-    flex: 1;
 }
 
 footer ul {
@@ -476,115 +338,24 @@ footer ul li {
 footer a {
     color: black;
     text-decoration: none;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* Ensure the anchor tag is above other elements */
-    cursor: pointer;
-    /* Change cursor to pointer on hover */
 }
 
-
-
-.smn-button-footer {
-    height: 30px;
-    padding: 20px 5px 0px 5px;
-}
-
-.smn-button-footer:hover {
-    transition: 0.2s;
-    scale: 1.1;
-}
-
-.followFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-.followFooter p {
-    font-size: 16px;
-    text-transform: capitalize;
-    margin-bottom: 30px;
-    font-weight: 500;
-    position: relative;
-    padding: 5px 10px 0px 0px;
-}
-
-.followFooter p::before {
-    content: '';
-    position: absolute;
-    right: 0;
-
-    background-color: var(--bg-color-red);
-    height: 28px;
-    box-sizing: border-box;
-    width: 3px;
-}
-
-#learn-more-footer {
-
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    /* Add padding to the footer */
-    box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-    z-index: 1;
-    /* Set a high z-index value for the footer */
-    scroll-snap-align: end;
-    box-sizing: content-box;
-}
-
-
-#learn-more-2 .columnText h2 {
-    padding: 60px 0 20px 0;
-}
-
-#learn-more-2 .columnText p {
-    text-align: left;
-    padding: 0 10px 15px 10px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    max-width: 560px;
-}
-
-
-.contact-background {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(images/contact.jpg) no-repeat center center / cover;
-
-}
-
-.contact-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* Adjust the opacity as needed */
-
-}
 
 .contact-form {
-    max-width: 360px;
+    max-width: 445px;
     max-height: 600px;
     margin-left: 25%;
     margin-right: 10px;
-    padding: 10px 10px 40px 10px;
+    padding: 40px 0px 80px 0px;
     background-color: var(--bg-color-white);
     border-radius: 32px;
     font-size: min(max(14px, 1vw), 16px);
-    box-shadow: rgba(65, 40, 40, 0.45) 0px 2px 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px;
 
 }
 
 .contact-form-base {
-    max-width: 270px;
+    width: 270px;
     text-align: left;
     margin: 0 auto;
 }
@@ -592,21 +363,22 @@ footer a {
 .contact-form label {
     margin-bottom: 7px;
     font-size: 14px;
-    align-self: flex-start;
 
 }
 
 .contact-form h2 {
     text-align: center;
-    margin: 0px;
-    font-size: min(max(32px, 5vw), 48px);
+    margin-bottom: 20px;
+    font-size: min(max(32px, 5vw), 54px);
     color: var(--bg-color-black-header);
+
+    margin-top: 0;
 }
 
 .contact-form p {
     text-align: center;
     margin: 0;
-    padding: 20px 0 0px 0;
+    padding: 0;
     font-size: min(max(14px, 1vw), 16px);
 
 }
@@ -622,10 +394,10 @@ footer a {
 
 }
 
-.contact-form button[type="button"] {
+.contact-form input[type="submit"] {
     width: 100%;
     padding: 10px;
-    border: solid 2px var(--bg-color-rose);
+    border: none;
     border-radius: 32px;
     background-color: var(--bg-color-red);
     color: var(--bg-color-white);
@@ -635,14 +407,56 @@ footer a {
     font-weight: bold;
 }
 
+
+/******************************************/
+.c-phone label {
+    margin-right: 10px;
+    /* Add some spacing between label and select */
+}
+
+.c-phone select,
+.c-phone input {
+    flex: 1;
+    /* Allow children to take up available space */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.c-phone {
+    display: flex;
+    /* Change to horizontal layout */
+    flex-direction: row;
+    /* Children will be placed in a row */
+    align-items: center;
+    /* Align children vertically in the center */
+}
+
+/*************************************************/
+
 .required-note {
     color: #999;
     font-size: 12px;
     margin-top: 5px;
-    align-self: flex-start;
+}
+
+.four {
+    background-color: rgb(191, 64, 191);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    color: transparent;
+}
 
 #hero {
     background: var(--bg-color-white) url(images/Hero.jpg) center/100% 100% no-repeat;
@@ -651,24 +465,6 @@ footer a {
     position: relative;
 
 
-}
-
-#learn-more {
-    background: var(--bg-color-white) url(images/alnes5.jpg) center/100% 100% no-repeat;
-    /*Need this on child of container to scroll snap*/
-    scroll-snap-align: start;
-    position: relative;
-}
-
-#trollstigen-hero>section#learn-more {
-    background: var(--bg-color-white) url(images/trollstigen1.jpg) center/100% 100% no-repeat;
-    /*Need this on child of container to scroll snap*/
-    scroll-snap-align: start;
-    position: relative;
-}
-
-#trollstigen-hero .hero-text {
-    font-size: 8vw;
 }
 
 
@@ -687,10 +483,6 @@ footer a {
     bottom: 0;
     left: 0;
 
-}
-
-#learn-more .callToAction {
-    background-color: var(--bg-color-white);
 }
 
 .callToAction p {
@@ -749,29 +541,15 @@ footer a {
 
 
 .hero-text {
-    margin: 50px 0 0 0;
+    margin: 0;
     padding: 0;
+    height: fit-content;
     position: absolute;
-    font-size: 8vw;
+    font-size: 7rem;
     font-weight: 700;
     color: var(--bg-color-white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    width: fit-content;
-    height: fit-content;
-}
-
-.learn-more-hero-text {
-    margin: 0;
-}
-
-#logoToggler {
-    z-index: 2;
-    height: 35px;
-    width: 92px;
-    position: absolute;
-    left: 2vw;
-    cursor: pointer;
-    opacity: 0;
+    width: 1000px;
 }
 
 .toggler {
@@ -783,7 +561,6 @@ footer a {
     left: 85vw;
     cursor: pointer;
     opacity: 0;
-    display: none;
 }
 
 .solid-background {
@@ -800,20 +577,12 @@ footer a {
     box-shadow: none;
 }
 
-.onHeaderHover {
-    background-color: white;
-}
-
-#cta-header {
-    display: none;
-}
-
 .header {
     position: absolute;
-    height: 60px;
+    height: 80px;
     width: 100vw;
     /* Use viewport width instead of percentage */
-    padding: 10px 2vw;
+    padding: 10px 100px;
     /* Adjust the padding as needed */
     box-sizing: border-box;
     /* Include padding and border in the total width */
@@ -832,41 +601,9 @@ footer a {
     color: var(--bg-color-black);
     font-weight: 600;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
+    /*Removes the default styling*/
+    margin-left: 40px;
 
-
-}
-
-.red-box,
-.black-box {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 3px;
-
-}
-
-.red-box {
-    background-color: #e30613;
-    /* BBC red color */
-    color: white;
-}
-
-.black-box {
-    background-color: #000000;
-    /* Black color */
-    color: white;
-    margin: 0 10px;
-    /* Adjust the margin as needed */
 }
 
 .navbar>ul {
@@ -884,20 +621,6 @@ footer a {
     font-weight: 600;
     text-decoration: none;
     margin-left: 40px;
-}
-
-.navbar>ul>li>div>a {
-    position: relative;
-    font-size: 18px;
-    /* Set the text color with full opacity */
-    font-weight: 600;
-    text-decoration: none;
-
-}
-
-.navbar>ul>li>div {
-    margin-left: 40px;
-    position: relative;
 }
 
 .navbar>ul>li a::before {
@@ -922,257 +645,51 @@ footer a {
 
 }
 
-.navbar>ul>li>div>a.button-action:hover::before {
+.navbar>ul>li>a.button-learn:hover::before {
     height: 0px;
     /* Set the height of the text-decoration line to 0px */
     text-decoration: none;
     width: 0px;
 }
 
-/*Not tested on mobile, verify*/
-@media (hover: none) {
-    .button-action {
-        background: linear-gradient(0deg, var(--bg-color-rose), 12%, var(--bg-color-red)) padding-box, linear-gradient(to right, var(--bg-color-rose), 12%, var(--bg-color-red)) border-box;
-
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    .button-action:not(:hover) {
-        color: var(--bg-color-white);
-    }
-
-}
 
 
 
-@media screen and (max-height: 1000px) and (orientation: portrait) {
 
-
-    #learn-more {
-        background: var(--bg-color-white) url(images/alnes4.jpg) center/100% 100% no-repeat;
-    }
-
-    #trollstigen-hero>section#learn-more {
-        background: var(--bg-color-white) url(images/trollstigen2.jpg) center/100% 100% no-repeat;
-    }
-
-    .hero-text {
-        font-size: 10vw;
-    }
-
-    #madeBy {
-        display: none;
-        visibility: hidden;
-    }
-
-    .button-group {
-        display: flex;
-        align-items: center;
-        scroll-snap-stop: always;
-    }
-
-    .button-group>.button-style {
-        margin: 0;
-    }
-
-    .button-group>p {
-        padding: 0px 10px !important;
-    }
-
-    #learn-more-footer {
-
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        /* Add padding to the footer */
-        box-sizing: border-box;
-        /* Include padding and border in the element's total width and height */
-        z-index: 1;
-        /* Set a high z-index value for the footer */
-        scroll-snap-align: end;
-        box-sizing: content-box;
-    }
-
+@media screen and (max-width: 1920px) {
     .contact-form {
-        margin: 20px 0 0 0;
-        padding: 10px 10px 40px 10px;
-        width: fit-content;
-    }
 
-    .content {
-        justify-content: center;
-    }
-
-    .right {
-        width: auto;
-    }
-
-    .left {
-        display: none;
-    }
-
-    .centeredHeader {
-        padding-top: 50px;
-    }
-
-    #about {
-        overflow-y: auto;
-        min-height: 100dvh;
-    }
-
-    #about .columnText {
-        margin-top: 1vh;
-    }
-
-    #about .columnText p {
-        font-size: min(max(16px, 1vw), 24px);
+        left: 37.5%;
     }
 
 }
 
-/*/
-On header-line hover, make it appear as white.
-*/
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
-    .transparent:hover {
-        background-color: white;
-        transition: .2s;
-        backface-visibility: hidden;
-    }
-
-}
-
-
-@media only screen and (max-width: 999px) and (orientation: landscape) {
-
-    /* FIX ME MAKE ME WORK*/
-    .right {
-        width: 100%;
-    }
-
-    .new-line {
-        flex: 1 0 100%;
-
-    }
-
-
-    .contact-form {
-        margin: 10px 0 0 8%;
-        padding: 3px;
-        max-width: 90vw;
-        width: 80vw;
-        scale: 0.8;
-    }
-
-    .contact-form form {
-        display: flex;
-        /* Change the display to flex */
-        flex-wrap: wrap;
-        /* Allow flex items to wrap to the next line */
-        justify-content: space-evenly;
-        /* Distribute items along the main axis */
-        align-items: center;
-        /* Align items vertically */
-        padding: 10px;
-
-    }
-
-    .contact-form-base {
-        width: 100%;
-        max-width: 650px;
-    }
-
-    .contact-form label {
-        text-align: left;
-        /* Align labels to the right */
-        align-self: flex-start;
-        padding: 0 10px 0 0;
-
-    }
-
-    .contact-form p {
-        display: none;
-    }
-
-    .contact-form h2 {
-        font-size: 34px;
-    }
-
-    .contact-form span {
-        display: none;
-    }
-
-    .contact-form input[type="text"] {
-        flex: 1 30%;
-        position: relative;
-        left: -2%;
-        max-width: 200px;
-
-    }
-
-    .contact-form textarea {
-        flex: 1 0 40%;
-        align-self: flex-end;
-        max-height: 6vh;
-
-
-    }
-
-    .contact-form input[type="submit"] {
-        flex: 0.5 0 60%;
-        margin-top: 10px;
-        align-self: flex-end;
-    }
-}
-
-
-@media screen and (orientation: portrait) {
+@media screen and (min-height: 1000px) and (orientation: portrait) {
     .row {
         flex-direction: column;
         /*  align-items: center;*/
     }
 
-    #container{
-        scroll-snap-type: y proximity;
-    }
     .column {
         height: auto;
         width: auto;
         flex: 1;
-
+        padding-top: 40px;
     }
 
     #about .img-half {
         margin: 0;
-        padding: 1vh 0 1vh 0;
     }
 
-    #about .column,
-    #about .columnText h2 {
-        padding: 0;
-    }
-
-
-    #alnes .columnText p {
-        max-width: 560px;
+    .columnText p {
+        width: 560px;
         font-size: min(max(18px, 1vh), 24px);
-        padding: 10px 5px;
     }
-
-    #trollstigen .columnText p {
-        max-width: 560px;
-        font-size: min(max(18px, 1vh), 24px);
-        padding: 10px 5%;
-    }
-
-
 
     #trollstigen .row {
         flex-direction: column-reverse;
         /*  align-items: center;*/
     }
-
 
 
 
@@ -1186,22 +703,12 @@ On header-line hover, make it appear as white.
         transition: 0s;
     }
 
-    .columnText h2 {
-        padding-top: 10px;
-        font-size: min(max(36px, 1vh), 42px);
+    .img-half {
+        margin: 0;
     }
 
-    .left {
-        display: none;
-    }
-
-    .toggler {
-        display: block;
-    }
-
-    #cta-header {
-        display: block;
-        margin-right: 12vw;
+    .hero-text {
+        width: 500px;
     }
 
     .hamburger {
@@ -1228,7 +735,7 @@ On header-line hover, make it appear as white.
         top: 0;
         left: 0;
         background: var(--bg-color-black);
-        height: 4px;
+        height: 2px;
         width: 60%;
         transition: all 0.4s ease;
     }
@@ -1243,7 +750,7 @@ On header-line hover, make it appear as white.
         top: -10px;
         background: var(--bg-color-black);
         width: 100%;
-        height: 3px;
+        height: 2px;
         transition: all 0.4s ease;
     }
 
@@ -1277,11 +784,11 @@ On header-line hover, make it appear as white.
     .navbar {
         background: var(--main-bg-color);
         width: 0;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 80px);
         position: fixed;
         top: 0;
         left: 0;
-        margin-top: 60px;
+        margin-top: 80px;
         /* Position the menu on the right side */
         transition: all 0.1s ease;
         overflow: hidden;
@@ -1295,7 +802,7 @@ On header-line hover, make it appear as white.
         min-width: 260px;
         left: 0;
         background: var(--main-bg-color);
-        margin-top: 60px;
+        margin-top: 80px;
         position: absolute;
         /* Move the menu to the left to create the animation effect */
     }
@@ -1309,7 +816,7 @@ On header-line hover, make it appear as white.
         flex-direction: column;
         position: fixed;
         justify-content: flex-end;
-        top: 10px;
+        top: 70px;
         padding-left: 10px;
 
         /* HIDDEN INITIALLY  :  */
@@ -1330,11 +837,7 @@ On header-line hover, make it appear as white.
 
     /* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
-    .toggler:not(:checked)~.navbar>ul>li>div.button-style {
-        transition: 0s;
-    }
-
-    .toggler:not(:checked)~.navbar>ul>li a::before {
+    .toggler:not(:checked)~.navbar>ul>li>a.button-learn {
         transition: 0s;
     }
 
@@ -1346,5 +849,286 @@ On header-line hover, make it appear as white.
     .toggler:checked~.navbar>ul>li>a:hover {
         color: var(--bg-color-orange);
     }
+
+}
+
+/* Adjust padding for smaller screens */
+@media (min-width: 760px) and (max-width: 1280px) and (min-height: 700px) and (max-height: 900px) {
+    .contact-form {
+
+        max-height: 55vh;
+        overflow: auto;
+
+    }
+
+
+    .c-phone {
+        flex-direction: column;
+        width: 100%;
+        align-items: normal;
+    }
+
+
+}
+
+/* Adjust padding for smaller screens */
+@media screen and (min-width: 0px) and (max-width: 375px) and (max-height: 800px) {
+    .contact-form {
+        max-height: 72.5vh;
+        padding: 20px 25px 20px 15px;
+        top: 60%;
+        left: 37.5%;
+        overflow-y: scroll;
+
+
+    }
+
+    .c-phone {
+        flex-direction: column;
+        width: 100%;
+        align-items: normal;
+    }
+
+
+
+}
+
+/* Adjust padding for smaller screens */
+@media screen and (min-width: 667px) and (max-width: 1000px) and (max-height: 440px) {
+    .contact-form {
+        max-height: 79vh;
+        padding: 7px 25px 20px 15px;
+        top: 55%;
+        left: 37.5%;
+        overflow-y: scroll;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 5px;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        /* Change to vertical layout */
+        align-items: flex-start;
+    }
+
+    .input-group,
+    .c-phone {
+        display: flex;
+        flex-direction: row;
+        /* Change to horizontal layout */
+        align-items: center;
+    }
+
+    .contact-form textarea {
+        height: 20px;
+        width: auto;
+    }
+
+    label {
+        width: 100px;
+        /* Set a fixed width for labels */
+    }
+
+    input {
+        flex: 1;
+        /* Allow input fields to expand to fill remaining space */
+    }
+
+    button {
+        align-self: flex-end;
+        /* Position button at the bottom of the form */
+    }
+
+}
+
+/* Adjust padding for smaller screens */
+@media screen and (min-width: 375px) and (max-width: 760px) and (min-height: 700px) {
+    .contact-form {
+        max-height: 79vh;
+        padding: 7px 25px 20px 15px;
+        overflow-y: scroll;
+        max-width: 30vw;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 5px;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        /* Change to vertical layout */
+        align-items: flex-start;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: row;
+        /* Change to horizontal layout */
+        align-items: center;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form textarea {
+        width: calc(80% - 24px);
+        /* Allow input fields to expand to fill remaining space */
+
+    }
+
+    .contact-form textarea {
+        height: 60px;
+
+    }
+
+    .contact-form input[type="submit"] {
+
+        width: 80%;
+
+
+        label {
+            width: 100px;
+            /* Set a fixed width for labels */
+        }
+
+
+
+        button {
+            align-self: flex-end;
+            /* Position button at the bottom of the form */
+        }
+
+
+    }
+
+    /* Adjust padding for smaller screens */
+    @media screen and (min-width: 667px) and (max-width: 1000px) and (max-height: 440px) {
+        .contact-form {
+            max-height: 79vh;
+            padding: 7px 25px 20px 15px;
+            top: 55%;
+            left: 37.5%;
+            overflow-y: scroll;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 5px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            /* Change to vertical layout */
+            align-items: flex-start;
+        }
+
+        .input-group,
+        .c-phone {
+            display: flex;
+            flex-direction: row;
+            /* Change to horizontal layout */
+            align-items: center;
+        }
+
+        .contact-form textarea {
+            height: 20px;
+            width: auto;
+        }
+
+        .c-phone label {
+            margin-right: 0px;
+        }
+
+        label {
+            width: 100px;
+            /* Set a fixed width for labels */
+        }
+
+        input {
+            flex: 1;
+            /* Allow input fields to expand to fill remaining space */
+        }
+
+        button {
+            align-self: flex-end;
+            /* Position button at the bottom of the form */
+        }
+
+
+
+    }
+}
+
+/* Adjust padding for smaller screens */
+@media (min-width: 760px) and (max-width: 1280px) and (min-height: 0px) and (max-height: 700px) and (orientation: landscape) {
+    .contact-form {
+
+        max-height: 35vh;
+        overflow-y: scroll;
+        margin-top: 30px;
+
+    }
+    #about .column{
+        padding: 0;
+        height: 45vh;
+
+    }
+    #about .columnText h2 {
+        padding: 20px 0 10px 0;
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .twoColumn {
+        column-count: 2;
+        /* Set the number of columns */
+        column-gap: 40px;
+        /* Add a gap between the columns */
+    }
+
+
+}
+
+/* Adjust padding for smaller screens */
+@media (min-width: 760px) and (max-width: 1280px) and (min-height: 700px) and (max-height: 900px) {
+    .contact-form {
+
+        max-height: 55vh;
+
+    }
+
+
+    .c-phone {
+        flex-direction: column;
+        width: 100%;
+        align-items: normal;
+    }
+
+
+}
+
+/* Adjust padding for smaller screens */
+@media screen and (min-width: 0px) and (max-width: 375px) and (max-height: 800px) {
+    .contact-form {
+        max-height: 72.5vh;
+        padding: 20px 25px 20px 15px;
+        top: 60%;
+        left: 37.5%;
+        overflow-y: scroll;
+
+
+    }
+
+    .c-phone {
+        flex-direction: column;
+        width: 100%;
+        align-items: normal;
+    }
+
+
 
 }

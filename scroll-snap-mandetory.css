@@ -1,0 +1,12 @@
+/*Magic scroll time*/
+#container {
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    height: 100vh;
+    /*Fallback
+     overflow-y: auto;
+    */
+    height: 100dvh;
+
+
+}
