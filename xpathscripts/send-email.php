@@ -33,7 +33,7 @@ if (isset($_POST['name']) && isset($_POST['email'])) {
         // Sender information
         $mail->setFrom($email, $name);
         // Add recipient, subject, and body of the email
-        $mail->addAddress("redirectedmailservicertr@gmail.com");
+        $mail->addAddress("post@royalturreiser.no");
         $mail->Subject = ("$email ($subject)");
         $mail->Body = $body;
         // Send mail
